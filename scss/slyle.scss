@@ -1,12 +1,286 @@
 @import "_head";
-.block{
-    color: red;
-    &-icon{
-        font-size: 10px;
-        box-shadow: rosybrown;
+
+$dark: #212B31;
+$light: #72787D;
+$yellow: #FFD042;
+$blue: #036FC7;
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  
+}
+button{
+    border: none;
+}
+a{
+    text-decoration: none;
+}
+
+.container {
+  max-width: 1056px;
+  margin: 0 auto;
+}
+.main-btn{
+    width: 166px;
+    height: 50px;
+    background-color: $dark;
+    color: #fff;
+    font-family: "Arial";
+    font-size: 17px;
+    line-height: 24px;
+    border-radius: 4px;
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.16);
+    transition: 0.3s;
+}
+.main-btn:hover{
+    cursor: pointer;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.8);
+}
+.min-btn{
+    width: 143px;
+    height: 34px;
+    font-size: 15px;
+    line-height: 16px;
+}
+.light-btn {
+    width: 166px;
+    height: 50px;
+    background-color: transparent;
+    color:$dark;
+    font-family: "Arial";
+    font-size: 17px;
+    line-height: 24px;
+    border-radius: 4px;
+    border: 1px solid #DADEDF;
+}
+.light-btn:hover{
+    cursor: pointer;
+}
+.decor{
+    position: relative;
+    color: $dark;
+}
+.decor::after{
+    position: absolute;
+    content: "";
+    height: 50%;
+    width: 100%;
+    background-color: $yellow;
+    bottom: -2px;
+    left: 0;
+    z-index: -1;
+}
+
+
+// *первый блок
+
+.header {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    padding: 0 31px;
+
+    &__nav ul {
+        display: flex;
+    }
+    &__nav li{
+        list-style: none;
+        margin-right: 22px;
+        color: $light
+    }
+    &__nav li:hover{
+        color: $blue;
+        cursor: pointer;
     }
 }
-.red{
-    color: red;
-    
+.main {
+    text-align: center;
+    h1{
+        margin: 74px 0 30px 0;
+    }
+    .main-btn{
+        margin-right: 16px;
+    }
+    img[alt="солнце над новостройками"]{
+        margin: 88px 0 36px 0;
+    }
 }
+// *второй блок 
+
+.features {
+    margin: 148px auto 142px auto;
+    display: flex;
+    justify-content: space-between;
+    // width: 1056px;
+
+    &__card {
+        width: 325px;
+        text-align: center;
+        img{
+            width: 48px;
+            height: 48px;
+        }
+    }
+}
+// * третий блок
+.chaos{
+    text-align: center;
+    h2{
+        color: $dark;
+        font-size: 32px;
+        line-height: 48px;
+    }
+    p{
+        color: $light;
+        font-size: 20px;
+        line-height: 32px;
+    }
+    img{
+        margin-bottom: 144px;
+    }
+}
+//  * четвертый блок 
+.helpers {
+    display: flex;
+    margin-top: 168px;
+    // .helpers__description
+
+    &__description {
+        h2{
+            color: $dark;
+            font-size: 32px;
+            line-height: 48px;
+        }
+        p{
+            color: $light;
+            font-size: 20px;
+            line-height: 32px;
+        }
+        .decor{
+            margin-top: 28px;
+        }
+    }
+}
+.icons{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 128px;
+    img{
+        margin-right: 39px;
+        margin-bottom: 10px;
+        width: 160px;
+    }
+    img:nth-child(5){
+        margin-right: 0px;
+    }
+}
+// * о компании
+
+.about {
+    margin-top: 120px;
+    margin-bottom: 30px;
+    // .about__text
+
+    &__text {
+        text-align: center;
+        margin-bottom: 28px;
+        h2{
+            color: $dark;
+            font-size: 32px;
+            line-height: 48px;
+        }
+        p{
+            color: $light;
+            font-size: 20px;
+            line-height: 32px;
+        }
+    }
+
+    &__component {
+        display: flex;
+        margin-bottom: 64px;
+        justify-content: space-between;
+        .about__component__description{
+            max-width: 60%;
+            text-align: center;
+            img{
+                height: 272px;
+            }
+            h4{
+                font-size: 18px;
+                line-height: 24px;
+                color: $dark
+            }
+            p{
+                font-size: 16px;
+                line-height: 24px;
+                color: $light;
+            }
+        }
+    }
+}
+
+.left {
+    padding-right: 60px;
+}
+.right {
+    padding-left: 60px;
+}
+
+// * о доставке
+
+.delivery {
+
+    // .delivery__cards
+
+    &__cards {
+        margin-top: 43px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        .card {
+            display: flex;
+            width: 30%;
+            margin-bottom: 30px;
+            img{
+                height: 48px;
+                width: 48px;
+                margin-right: 16px;
+            }
+            h6{
+                font-size: 18px;
+                line-height: 24px;
+                color: $dark;
+                margin-bottom: 11px;
+                margin-top: 0;
+            }
+            p{
+                color: $light;
+                font-size: 16px;
+                line-height: 24px;
+            }
+}
+    }
+}
+
+.card-text {
+}
+
+
+
+
+
+
+
+
+
+
