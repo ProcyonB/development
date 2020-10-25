@@ -1,0 +1,12 @@
+@import "_head";
+.block{
+    color: red;
+    &-icon{
+        font-size: 10px;
+        box-shadow: rosybrown;
+    }
+}
+.red{
+    color: red;
+    
+}

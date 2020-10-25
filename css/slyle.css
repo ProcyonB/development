@@ -1,0 +1,17 @@
+bode {
+  font-size: 20px;
+}
+
+.block {
+  color: red;
+}
+
+.block-icon {
+  font-size: 10px;
+  -webkit-box-shadow: rosybrown;
+          box-shadow: rosybrown;
+}
+
+.red {
+  color: red;
+}
