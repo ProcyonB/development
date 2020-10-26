@@ -129,8 +129,11 @@ a {
   margin: 88px 0 36px 0;
 }
 
-.features {
+.features_1 {
   margin: 148px auto 142px auto;
+}
+
+.features {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -313,4 +316,45 @@ a {
   color: #72787D;
   font-size: 16px;
   line-height: 24px;
+}
+
+.reliable {
+  margin-top: 130px;
+}
+
+.reliable .leafs {
+  position: relative;
+  display: inline-block;
+}
+
+.reliable img[alt="decor"] {
+  position: absolute;
+  top: -20px;
+}
+
+.reliable .reliable-text {
+  background-color: #F6F8F9;
+  margin-top: 62px;
+  margin-bottom: 60px;
+  padding: 40px;
+  min-height: 130px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 18px;
+}
+
+.reliable .reliable-text img {
+  width: 40px;
+  height: 40px;
+}
+
+.features_2 {
+  margin-top: 50px;
 }

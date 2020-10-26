@@ -114,12 +114,12 @@ a{
     }
 }
 // *второй блок 
-
-.features {
+.features_1{
     margin: 148px auto 142px auto;
+}
+.features {
     display: flex;
     justify-content: space-between;
-    // width: 1056px;
 
     &__card {
         width: 325px;
@@ -271,10 +271,38 @@ a{
 }
     }
 }
+// * надежность
 
-.card-text {
+.reliable{
+    margin-top: 130px;
+        .leafs{
+            position: relative;
+            display: inline-block;
+        }
+        img[alt="decor"]{
+            position: absolute;
+            top: -20px;
+        }
+    .reliable-text {
+        background-color: #F6F8F9;
+        margin-top: 62px;
+        padding: 40px;
+        min-height: 130px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 18px;
+        img{
+            width: 40px;
+            height: 40px;
+        }
+}
 }
 
+
+.features_2{
+    margin-top: 50px;
+}
 
 
 
