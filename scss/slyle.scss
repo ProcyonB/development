@@ -122,7 +122,7 @@ a{
     justify-content: space-between;
 
     &__card {
-        width: 325px;
+        max-width: 33%;
         text-align: center;
         img{
             width: 48px;
@@ -299,11 +299,74 @@ a{
 }
 }
 
-
 .features_2{
     margin-top: 50px;
 }
 
+// * темный блок
+
+.dark-block {
+    background-color: $dark;
+    margin-top: 227px;
+    position: relative;
+    padding: 60px 0 201px 0;
+    color: #fff;
+    img[alt="мобильное приложение"]{
+        position: absolute;
+        right: 0;
+    }
+    &__content {
+        
+        h2{
+            font-size: 32px;
+            line-height: 48px;
+            margin-bottom: 54px;
+        }
+        h4{
+            font-size: 18px;
+            line-height: 24px;
+            margin-top: 24px;
+            margin-bottom: 10px;
+            position: relative;
+        }
+        h4::before{
+            position: absolute;
+            content: "";
+            height: 8px;
+            width: 8px;
+            border-radius: 50%;
+            left: -32px;
+            top: 10px;
+            background-color: #fff;
+        }
+        p{
+            font-size: 16px;
+            line-height: 24px;
+        }
+        .buttons{
+            display: flex;
+            margin-top: 74px;
+            margin-bottom: 127px;
+            .main-btn-light{
+                background-color: #fff;
+                color: $dark;
+                transition: 0.3s;
+            }
+            .main-btn-light:hover{
+             box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.8);   
+            }
+            
+            .light-btn-dark{
+                color: #fff;
+                border: 1px solid #DADEDF;
+                margin-left: 16px;
+            }
+        }
+        
+    }
+}
+.container {
+}
 
 
 
