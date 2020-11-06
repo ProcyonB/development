@@ -247,28 +247,31 @@ a{
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
-        .card {
-            display: flex;
+        .card{
             width: 30%;
-            margin-bottom: 30px;
-            img{
-                height: 48px;
-                width: 48px;
-                margin-right: 16px;
-            }
-            h6{
-                font-size: 18px;
-                line-height: 24px;
-                color: $dark;
-                margin-bottom: 11px;
-                margin-top: 0;
-            }
-            p{
-                color: $light;
-                font-size: 16px;
-                line-height: 24px;
-            }
+        }
+    }
 }
+.card {
+    display: flex;
+    
+    margin-bottom: 30px;
+    img{
+        height: 48px;
+        width: 48px;
+        margin-right: 16px;
+    }
+    h6{
+        font-size: 18px;
+        line-height: 24px;
+        color: $dark;
+        margin-bottom: 11px;
+        margin-top: 0;
+    }
+    p{
+        color: $light;
+        font-size: 16px;
+        line-height: 24px;
     }
 }
 // * надежность
@@ -365,13 +368,211 @@ a{
         
     }
 }
-.container {
+// * как с нами работать
+
+.how-work {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60px;
+    // .how-work__question
+
+    &__question {
+        max-width: 35%;
+        h2{
+            font-size: 32px;
+            line-height: 48px;
+            color: $dark;
+        }
+        p{
+            font-size: 20px;
+            line-height: 32px;
+            color: $light;
+            margin-top: 21px;
+            margin-bottom: 60px;
+        }
+    }
+
+    // .how-work__points
+
+    &__points {
+        max-width: 50%;
+        h4{
+            font-size: 17px;
+            line-height: 24px;
+            color: $dark;
+            margin-bottom: 10px;
+            // margin-left: 32px;
+        }
+        p{
+            font-size: 16px;
+            line-height: 24px;
+            color: $light;
+            margin-bottom: 30px;
+        }
+        ol {
+            list-style-type: none;
+            counter-reset: point;
+            }
+            
+            ol li {
+            position: relative;
+            max-width: 100%;
+            }
+            
+            ol li:before {
+            content: counter(point);
+            counter-increment: point 1;
+            position: absolute;
+            left: -70px;
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            padding-top: 10px;
+            border: 1px solid #DADEDF;
+            color:$light;
+            }
+    }
+}
+
+// * почему с нами работать
+
+.why {
+    margin-top: 96px;
+    margin-bottom: 127px;
+    &__wrapper {
+        margin-top: 55px;
+        display: flex;
+        justify-content: space-between;
+        .quotes {
+            position: relative;
+            max-width: 50%;
+            height: 80%;
+            padding: 45px 50px 45px 50px;
+            background-color: #F6F8F9;
+            img[alt="quote"]{
+                position: absolute;
+                top: 8%;
+                left: 6%;
+            }
+            h2{
+                font-size: 29px;
+                line-height: 48px;
+                font-weight: normal;
+                margin-bottom: 28px;
+                position: relative;
+                z-index: 5;
+            }
+            .quotes-card{
+                h6{
+                    font-size: 16px;
+                    line-height: 19px;
+                    margin-bottom: 1px;
+                }
+                p{
+                    font-size: 16px;
+                    line-height: 19px;
+                    margin-top: auto;
+                }
+            }
+            span{
+                display: inline-block;
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+                background-color: rgba(3,111,199,0.2);
+                margin-right: 8px;
+            }
+            .blue{
+                background-color: #036FC7;
+            }
+}
+    }
+    &__cards{
+        max-width: 40%;
+        display: block;
+        .card {
+            width: 100%;
+        }
+    }
+}
+
+// * partners
+
+.partners {
+    
+    margin: 0 auto;
+    margin-top: 140px;
+    width: 680px;
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: space-between;
+    // .partners__card
+
+    &__card {
+        margin-bottom: 40px;;
+        max-width: 180px;
+        text-align: center;
+        vertical-align: bottom;
+        display: flex;
+        flex-direction: column;
+        span{
+            flex-grow: 1;
+        }
+            p{
+            font-size: 16px;
+            line-height: 19px;
+            color: $light;
+        }
+    }
+    .center{
+        margin: 0 auto;
+    }
+}
+// * готов к опимизации
+.optima{
+    margin-top: 150px;
+    margin-bottom: 150px;
+    height: 470px;
+    padding: 117px 38px;
+    background: url(../img/optimisation.png) center no-repeat;
+    background-size: cover;
+    // background-color: lightblue;
+    h2{
+        font-size: 48px;
+        line-height: 64px;
+        color: $dark;
+    }
 }
 
 
+// * футер
 
-
-
-
-
-
+.footer-main{
+    margin-bottom: 160px;
+    display: flex;
+    justify-content: space-between;
+    h2{
+        font-size: 16px;
+        line-height: 24px;
+        color: $dark;
+        margin-bottom: 22px;
+    }
+    p{
+        font-size: 16px;
+        line-height: 24px;
+        color: $light;
+        margin-bottom: 8px;
+    }
+}
+.bottom{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    border-top: 1px solid #DADEDF;
+    p{
+        font-size: 16px;
+        line-height: 24px;
+        color: $light;
+    }
+}
